@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import DataContextProvider from './src/context/DataContextProvider'
+import MainScreen from './src/screens/MainScreen'
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <DataContextProvider>
+      <MainScreen />
+    </DataContextProvider>
   )
 }
 
