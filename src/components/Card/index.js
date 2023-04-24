@@ -9,7 +9,7 @@ const Cart = ({ post }) => {
                     <Text style={styles.title}>{post.title}</Text>
                     <Text numberOfLines={2} style={{ color: 'white' }}>{post.summary}</Text>
                 </View>
-                    <Text style={styles.readCount}>read {post.totalReadingTime} times</Text>
+                    <Text style={styles.readCount}>read {post.totalReadingTime} m</Text>
             </ImageBackground>
         </Pressable>
     )
