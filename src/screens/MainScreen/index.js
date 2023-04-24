@@ -1,20 +1,30 @@
 import { useContext } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, View } from 'react-native'
+
 import { DataContext } from '../../context/DataContext'
+import Cart from '../../components/Card';
 
 const MainScreen = () => {
-    const {data} = useContext(DataContext);
-   
+  const { data } = useContext(DataContext);
+
   return (
-    <View>
-      
-      {data.map((item,index)=>(
-        <Text key={index}>{item.title}</Text>
-      ))}
+    <View style={styles.container}>
+      <FlatList
+        data={data}
+        renderItem={({ item }) => <Cart post={item} />}
+      showsVerticalScrollIndicator={false}
+      />
+
     </View>
   )
 }
 
 export default MainScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingHorizontal:10,
+    paddingTop: 60,
+  }
+})
