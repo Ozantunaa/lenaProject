@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         borderRadius: 10,
         overflow: 'hidden',
-        marginVertical: 5
+        marginVertical: 10
     },
     overlay: {
         backgroundColor: 'rgba(0, 0, 0, 0.4)',

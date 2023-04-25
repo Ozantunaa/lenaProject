@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import { ActivityIndicator, FlatList, RefreshControl, StyleSheet, Text, View } from 'react-native'
+import {FlatList, Platform, RefreshControl, StyleSheet, View } from 'react-native'
 
 import { DataContext } from '../../context/DataContext'
 import Cart from '../../components/Card';
@@ -23,6 +23,7 @@ const MainScreen = () => {
     <View style={styles.container}>
       <FlatList
         data={data}
+        keyExtractor={(item,index) => index.toString()}
         renderItem={({ item }) => <Cart post={item} />}
         showsVerticalScrollIndicator={false}
         onEndReachedThreshold={0.2}
@@ -44,6 +45,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 10,
-    paddingTop: 60,
+    paddingTop: Platform.OS === 'android' ? 30 : 60,
   }
 })
