@@ -4,7 +4,7 @@ import {FlatList, Platform, RefreshControl, StyleSheet, View } from 'react-nativ
 import { DataContext } from '../../context/DataContext'
 import Cart from '../../components/Card';
 
-const MainScreen = () => {
+const MainScreen = ({navigation}) => {
   const { data, getData } = useContext(DataContext);
   const [refreshing, setRefreshing] = useState(false);
 
@@ -24,7 +24,7 @@ const MainScreen = () => {
       <FlatList
         data={data}
         keyExtractor={(item,index) => index.toString()}
-        renderItem={({ item }) => <Cart post={item} />}
+        renderItem={({ item }) => <Cart navigation={navigation} post={item} />}
         showsVerticalScrollIndicator={false}
         onEndReachedThreshold={0.2}
         onEndReached={() => getData()}

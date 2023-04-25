@@ -1,10 +1,9 @@
-import { useNavigation } from '@react-navigation/native'
 import { useContext } from 'react';
 import { View, Text, StyleSheet, Pressable, ImageBackground } from 'react-native'
 import { DataContext } from '../../context/DataContext';
 
-const Card = ({ post }) => {
-    const navigation = useNavigation();
+const Card = ({ post, navigation }) => {
+
     const { select } = useContext(DataContext);
 
     const goToDetail = () => {
