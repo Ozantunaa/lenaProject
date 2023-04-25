@@ -3,11 +3,11 @@ import { useContext } from 'react';
 import { DataContext } from '../../context/DataContext';
 
 const DetailScreen = () => {
-  const { selectedCart } = useContext(DataContext);
+  const { selectedCard } = useContext(DataContext);
 
   return (
     <View>
-      <Text>{selectedCart.content}</Text>
+      <Text>{selectedCard.content}</Text>
     </View>
   )
 }

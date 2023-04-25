@@ -1,29 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { DataContext } from './DataContext';
+import { fetchData } from '../services/ApiService';
 
 const DataContextProvider = ({ children }) => {
     const [data, setData] = useState([]);
-    const [selectedCart, setSelectedCart] = useState(null);
+    const [selectedCard, setSelectedCard] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('https://www.lenasoftware.com/api/v1/en/maestro/1');
-                const json = await response.json();
-                setData(json.result)
-            } catch (error) {
-                console.log(error)
-            };
+        const getData = async () => {
+            const result = await fetchData();
+            setData(result);
         };
-        fetchData()
+        getData();
     }, []);
 
-    const select = (cart) => {
-        setSelectedCart(cart);
+    const select = (card) => {
+        setSelectedCard(card);
     }
 
     return (
-        <DataContext.Provider value={{ data,select,setSelectedCart,selectedCart }}>
+        <DataContext.Provider value={{ data, select, setSelectedCard, selectedCard }}>
             {children}
         </DataContext.Provider>
     );

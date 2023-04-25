@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { View, Text, StyleSheet, Pressable, ImageBackground } from 'react-native'
 import { DataContext } from '../../context/DataContext';
 
-const Cart = ({ post }) => {
+const Card = ({ post }) => {
     const navigation = useNavigation();
     const { select } = useContext(DataContext);
 
@@ -26,7 +26,7 @@ const Cart = ({ post }) => {
     )
 }
 
-export default Cart
+export default Card
 const styles = StyleSheet.create({
     post: {
         width: '100%',

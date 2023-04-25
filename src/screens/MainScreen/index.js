@@ -13,6 +13,7 @@ const MainScreen = () => {
         data={data}
         renderItem={({ item }) => <Cart post={item} />}
         showsVerticalScrollIndicator={false}
+        
       />
 
     </View>
