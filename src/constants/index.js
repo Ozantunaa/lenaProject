@@ -1,1 +1,0 @@
-export const API_LINK = 'https://www.lenasoftware.com/api/v1/en/maestro/1'
