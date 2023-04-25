@@ -1,10 +1,10 @@
 ### LenaProject  Kurulumu
-Aşağıdaki adımları takip ederek Story React Native uygulamasının nasıl kurulacağını öğrenebilirsiniz.
+Aşağıdaki adımları takip ederek LenaProject React Native uygulamasının nasıl kurulacağını öğrenebilirsiniz.
 
 <div style="display: flex;">
-  <img src="src/assets/screenshots/sc1.png" width="250" height="500" style="margin-right: 10px;">
-  <img src="src/assets/screenshots/sc2.png" width="250" height="500" style="margin-right: 10px;">
-  <img src="src/assets/screenshots/sc3.png" width="250" height="500">
+  <img src="https://github.com/Ozantunaa/lenaProject/blob/main/src/assest/screenshots/sc1.png?raw=true" width="250" height="500" style="margin-right: 10px;">
+  <img src="https://github.com/Ozantunaa/lenaProject/blob/main/src/assest/screenshots/sc2.png?raw=true" width="250" height="500" style="margin-right: 10px;">
+  <img src="https://github.com/Ozantunaa/lenaProject/blob/main/src/assest/screenshots/sc3.png?raw=true" width="250" height="500">
 </div>
 
 
