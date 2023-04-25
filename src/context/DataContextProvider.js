@@ -3,6 +3,7 @@ import { DataContext } from './DataContext';
 
 const DataContextProvider = ({ children }) => {
     const [data, setData] = useState([]);
+    const [selectedCart, setSelectedCart] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,9 +18,12 @@ const DataContextProvider = ({ children }) => {
         fetchData()
     }, []);
 
+    const select = (cart) => {
+        setSelectedCart(cart);
+    }
 
     return (
-        <DataContext.Provider value={{ data }}>
+        <DataContext.Provider value={{ data,select,setSelectedCart,selectedCart }}>
             {children}
         </DataContext.Provider>
     );

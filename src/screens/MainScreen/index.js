@@ -12,7 +12,7 @@ const MainScreen = () => {
       <FlatList
         data={data}
         renderItem={({ item }) => <Cart post={item} />}
-      showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
       />
 
     </View>
@@ -24,7 +24,7 @@ export default MainScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal:10,
+    paddingHorizontal: 10,
     paddingTop: 60,
   }
 })

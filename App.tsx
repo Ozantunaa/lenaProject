@@ -1,10 +1,10 @@
 import DataContextProvider from './src/context/DataContextProvider'
-import MainScreen from './src/screens/MainScreen'
+import AppNavigator from './src/navigation/AppNavigator'
 
 const App = () => {
   return (
     <DataContextProvider>
-      <MainScreen />
+      <AppNavigator/>
     </DataContextProvider>
   )
 }

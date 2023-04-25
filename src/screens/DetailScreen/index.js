@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { useContext } from 'react';
+import { DataContext } from '../../context/DataContext';
 
 const DetailScreen = () => {
+  const { selectedCart } = useContext(DataContext);
+
   return (
     <View>
-      <Text>index</Text>
+      <Text>{selectedCart.content}</Text>
     </View>
   )
 }
